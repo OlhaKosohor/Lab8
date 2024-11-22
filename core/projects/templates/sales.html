@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Продажі</title>
+</head>
+
+<body>
+  <h1>Список продажів</h1>
+  <table border="1">
+    <tr>
+      <th>Клієнт</th>
+      <th>Товар</th>
+      <th>Кількість</th>
+      <th>Знижка</th>
+      <th>Метод оплати</th>
+      <th>Необхідність доставки</th>
+      <th>Вартість доставки</th>
+    </tr>
+    {% for sale in sales %}
+    <tr>
+      <td>{{ sale.client.company_name }}</td>
+      <td>{{ sale.product.product_name }}</td>
+      <td>{{ sale.quantity }}</td>
+      <td>{{ sale.discount }}</td>
+      <td>{{ sale.payment_method }}</td>
+      <td>{{ sale.delivery_needed }}</td>
+      <td>{{ sale.delivery_cost }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+
+</html>

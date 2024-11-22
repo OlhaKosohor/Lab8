@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Клієнти</title>
+</head>
+
+<body>
+  <h1>Список клієнтів</h1>
+  <table border="1">
+    <tr>
+      <th>Назва фірми</th>
+      <th>Тип клієнта</th>
+      <th>Адреса</th>
+      <th>Телефон</th>
+      <th>Контактна особа</th>
+      <th>Розрахунковий рахунок</th>
+    </tr>
+    {% for client in clients %}
+    <tr>
+      <td>{{ client.company_name }}</td>
+      <td>{{ client.client_type }}</td>
+      <td>{{ client.address }}</td>
+      <td>{{ client.phone }}</td>
+      <td>{{ client.contact_person }}</td>
+      <td>{{ client.account_number }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+
+</html>
